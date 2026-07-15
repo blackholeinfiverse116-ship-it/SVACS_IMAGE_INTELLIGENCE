@@ -1,0 +1,109 @@
+{
+  "trace_id": "trace_wrap_005",
+  "observation_id": "obs_trace_wrap_005",
+  "bucket_id": "bucket_83edc7a8f9da4e3b8b113bab9531be48",
+  "created_at": "2026-07-15T04:10:10.617458Z",
+  "observation": {
+    "trace_id": "trace_wrap_005",
+    "observation_id": "obs_trace_wrap_005",
+    "timestamp": "2026-07-15T04:10:10.616844Z",
+    "observation_source": "ais",
+    "upstream_source_type": "ais_feed",
+    "entities": [
+      {
+        "entity_id": "ent_ais_123456789",
+        "name": "MAERSK ESSEX",
+        "entity_type": "container_ship",
+        "raw_confidence": 0.9,
+        "bounding_box": null,
+        "ocr_text": null,
+        "metadata": {
+          "mmsi": "123456789",
+          "imo": null,
+          "callsign": null,
+          "speed_knots": 18.2,
+          "heading": 270,
+          "lat": 15.4,
+          "lon": 88.2
+        }
+      }
+    ],
+    "upstream_confidence": 0.9,
+    "supporting_evidence": {
+      "ais_raw": {
+        "trace_id": "trace_wrap_005",
+        "observation_id": "obs_trace_wrap_005",
+        "mmsi": "123456789",
+        "vessel_name": "MAERSK ESSEX",
+        "ais_type": "container_ship",
+        "signal_quality": 0.9,
+        "speed_knots": 18.2,
+        "heading": 270,
+        "lat": 15.4,
+        "lon": 88.2
+      }
+    },
+    "provenance": {
+      "produced_by": "AIS Feed",
+      "schema_version": "1.0.0"
+    },
+    "schema_version": "1.0.0"
+  },
+  "reasoning": {
+    "candidate_vessel": "MAERSK ESSEX",
+    "candidate_class": "container_ship",
+    "reasoning_narrative": [
+      "Upstream layer classified the primary entity as 'MAERSK ESSEX' (container_ship) with raw confidence 0.90.",
+      "AIS-derived observation: MMSI 123456789 correlated directly to reported vessel identity.",
+      "No knowledge base corroboration found for this candidate identity; confidence will reflect an unverified classification."
+    ],
+    "knowledge_matches": [],
+    "evidence_signals": {
+      "ais_mmsi": "123456789",
+      "knowledge_verified": false
+    }
+  },
+  "confidence": {
+    "vision_confidence": 0.9,
+    "knowledge_adjustment": -0.1,
+    "ais_adjustment": 0.2,
+    "manual_adjustment": 0.0,
+    "dimension_adjustment": 0.0,
+    "final_confidence": 1.0,
+    "rationale": [
+      "Base (upstream) confidence: 0.90",
+      "-0.10 no knowledge base corroboration found (unverified)",
+      "+0.20 AIS correlation available (high-trust source)",
+      "Final SVACS maritime confidence: 1.00"
+    ]
+  },
+  "explainable": {
+    "trace_id": "trace_wrap_005",
+    "observation_id": "obs_trace_wrap_005",
+    "candidate_vessel": "MAERSK ESSEX",
+    "candidate_class": "container_ship",
+    "confidence": 1.0,
+    "supporting_evidence": [
+      "Primary detected entity: MAERSK ESSEX (container_ship)",
+      "Observation source: ais"
+    ],
+    "maritime_reasoning": [
+      "Upstream layer classified the primary entity as 'MAERSK ESSEX' (container_ship) with raw confidence 0.90.",
+      "AIS-derived observation: MMSI 123456789 correlated directly to reported vessel identity.",
+      "No knowledge base corroboration found for this candidate identity; confidence will reflect an unverified classification."
+    ],
+    "knowledge_references": [
+      "No confirmed knowledge base reference"
+    ],
+    "runtime_trace": [
+      "trace_id=trace_wrap_005",
+      "observation_id=obs_trace_wrap_005",
+      "stage=StructuredIntelligenceConsumer:complete",
+      "stage=MaritimeReasoningEngine:complete",
+      "stage=ConfidenceRefinementEngine:complete",
+      "stage=ExplainabilityGenerator:complete"
+    ],
+    "lineage_reference": null
+  },
+  "replay_safe": true
+}

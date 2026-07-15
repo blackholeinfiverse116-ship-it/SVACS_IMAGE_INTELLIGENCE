@@ -1,0 +1,101 @@
+{
+  "trace_id": "trace_manual_001",
+  "observation_id": "obs_manual_001",
+  "bucket_id": "bucket_af3fe48b3c59461a84a245c88c21cd00",
+  "created_at": "2026-07-15T04:09:56.697127Z",
+  "observation": {
+    "trace_id": "trace_manual_001",
+    "observation_id": "obs_manual_001",
+    "timestamp": "2026-07-15T04:09:56.697019Z",
+    "observation_source": "manual",
+    "upstream_source_type": "manual_operator",
+    "entities": [
+      {
+        "entity_id": "ent_manual_63b44f58",
+        "name": "Unknown Fishing Trawler",
+        "entity_type": "fishing_vessel",
+        "raw_confidence": 0.6,
+        "bounding_box": null,
+        "ocr_text": null,
+        "metadata": {
+          "operator_id": "op_42",
+          "notes": "Observed visually near coastline, no photo captured."
+        }
+      }
+    ],
+    "upstream_confidence": 0.6,
+    "supporting_evidence": {
+      "manual_raw": {
+        "trace_id": "trace_manual_001",
+        "observation_id": "obs_manual_001",
+        "intelligence_type": "manual",
+        "operator_id": "op_42",
+        "reported_vessel_name": "Unknown Fishing Trawler",
+        "reported_type": "fishing_vessel",
+        "operator_confidence": 0.6,
+        "notes": "Observed visually near coastline, no photo captured."
+      }
+    },
+    "provenance": {
+      "produced_by": "Manual Operator Entry",
+      "schema_version": "1.0.0"
+    },
+    "schema_version": "1.0.0"
+  },
+  "reasoning": {
+    "candidate_vessel": "Unknown Fishing Trawler",
+    "candidate_class": "fishing_vessel",
+    "reasoning_narrative": [
+      "Upstream layer classified the primary entity as 'Unknown Fishing Trawler' (fishing_vessel) with raw confidence 0.60.",
+      "Manual operator report treated as corroborating, lower-confidence evidence.",
+      "No knowledge base corroboration found for this candidate identity; confidence will reflect an unverified classification."
+    ],
+    "knowledge_matches": [],
+    "evidence_signals": {
+      "knowledge_verified": false
+    }
+  },
+  "confidence": {
+    "vision_confidence": 0.6,
+    "knowledge_adjustment": -0.1,
+    "ais_adjustment": 0.0,
+    "manual_adjustment": -0.05,
+    "dimension_adjustment": 0.0,
+    "final_confidence": 0.45,
+    "rationale": [
+      "Base (upstream) confidence: 0.60",
+      "-0.10 no knowledge base corroboration found (unverified)",
+      "-0.05 manual operator report only (lower certainty than sensor fusion)",
+      "Final SVACS maritime confidence: 0.45"
+    ]
+  },
+  "explainable": {
+    "trace_id": "trace_manual_001",
+    "observation_id": "obs_manual_001",
+    "candidate_vessel": "Unknown Fishing Trawler",
+    "candidate_class": "fishing_vessel",
+    "confidence": 0.45,
+    "supporting_evidence": [
+      "Primary detected entity: Unknown Fishing Trawler (fishing_vessel)",
+      "Observation source: manual"
+    ],
+    "maritime_reasoning": [
+      "Upstream layer classified the primary entity as 'Unknown Fishing Trawler' (fishing_vessel) with raw confidence 0.60.",
+      "Manual operator report treated as corroborating, lower-confidence evidence.",
+      "No knowledge base corroboration found for this candidate identity; confidence will reflect an unverified classification."
+    ],
+    "knowledge_references": [
+      "No confirmed knowledge base reference"
+    ],
+    "runtime_trace": [
+      "trace_id=trace_manual_001",
+      "observation_id=obs_manual_001",
+      "stage=StructuredIntelligenceConsumer:complete",
+      "stage=MaritimeReasoningEngine:complete",
+      "stage=ConfidenceRefinementEngine:complete",
+      "stage=ExplainabilityGenerator:complete"
+    ],
+    "lineage_reference": null
+  },
+  "replay_safe": true
+}
