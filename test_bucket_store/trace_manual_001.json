@@ -1,17 +1,17 @@
 {
   "trace_id": "trace_manual_001",
   "observation_id": "obs_manual_001",
-  "bucket_id": "bucket_af3fe48b3c59461a84a245c88c21cd00",
-  "created_at": "2026-07-15T04:09:56.697127Z",
+  "bucket_id": "bucket_02c2a4471f60470dbc47b86ae60e2c9d",
+  "created_at": "2026-07-18T07:50:17.440635Z",
   "observation": {
     "trace_id": "trace_manual_001",
     "observation_id": "obs_manual_001",
-    "timestamp": "2026-07-15T04:09:56.697019Z",
+    "timestamp": "2026-07-18T07:50:17.440568Z",
     "observation_source": "manual",
     "upstream_source_type": "manual_operator",
     "entities": [
       {
-        "entity_id": "ent_manual_63b44f58",
+        "entity_id": "ent_manual_8864f13e",
         "name": "Unknown Fishing Trawler",
         "entity_type": "fishing_vessel",
         "raw_confidence": 0.6,

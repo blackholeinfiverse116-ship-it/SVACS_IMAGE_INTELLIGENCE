@@ -1,0 +1,106 @@
+{
+  "trace_id": "trace_samachar_e49b235f2b8a4828b42a2ce359fa75b9",
+  "observation_id": "obs_8377d574237a48b5907b96b0e5a7c6f0",
+  "bucket_id": "bucket_4a192384f00649f2a95526bfb8059a76",
+  "created_at": "2026-07-18T07:50:41.077063Z",
+  "observation": {
+    "trace_id": "trace_samachar_e49b235f2b8a4828b42a2ce359fa75b9",
+    "observation_id": "obs_8377d574237a48b5907b96b0e5a7c6f0",
+    "timestamp": "2026-07-18T07:50:41.063636Z",
+    "observation_source": "image",
+    "upstream_source_type": "mobile",
+    "entities": [
+      {
+        "entity_id": "ent_9f0daf3b",
+        "name": "Cargo Vessel",
+        "entity_type": "commercial_ship",
+        "raw_confidence": 0.92,
+        "bounding_box": {
+          "x_min": 0.25,
+          "y_min": 0.4,
+          "x_max": 0.7,
+          "y_max": 0.65
+        },
+        "ocr_text": [
+          "cargo vessel spotted near territorial boundaries"
+        ],
+        "metadata": {
+          "length_estimate_m": 180,
+          "flag": "Panama"
+        }
+      }
+    ],
+    "upstream_confidence": 0.92,
+    "supporting_evidence": {
+      "image_url": "http://localhost:8005/data/uploads/trace_samachar_e49b235f2b8a4828b42a2ce359fa75b9.png",
+      "ocr_text": "cargo vessel spotted near territorial boundaries",
+      "metadata": {
+        "original_filename": "ship.png",
+        "file_size_bytes": 67,
+        "content_type": "image/png"
+      }
+    },
+    "provenance": {
+      "produced_by": "Samachar Ingestion Companion Service v1.0.0",
+      "schema_version": "1.0.0"
+    },
+    "schema_version": "1.0.0"
+  },
+  "reasoning": {
+    "candidate_vessel": "Cargo Vessel",
+    "candidate_class": "commercial_ship",
+    "reasoning_narrative": [
+      "Upstream layer classified the primary entity as 'Cargo Vessel' (commercial_ship) with raw confidence 0.92.",
+      "No maritime knowledge base match found; falling back to upstream classification. Flagged UNVERIFIED against Jane's Fighting Ships / fleet-history data.",
+      "No knowledge base corroboration found for this candidate identity; confidence will reflect an unverified classification."
+    ],
+    "knowledge_matches": [],
+    "evidence_signals": {
+      "knowledge_verified": false
+    }
+  },
+  "confidence": {
+    "vision_confidence": 0.92,
+    "knowledge_adjustment": -0.1,
+    "ais_adjustment": 0.0,
+    "manual_adjustment": 0.0,
+    "dimension_adjustment": 0.0,
+    "final_confidence": 0.82,
+    "rationale": [
+      "Base (upstream) confidence: 0.92",
+      "-0.10 no knowledge base corroboration found (unverified)",
+      "Final SVACS maritime confidence: 0.82"
+    ]
+  },
+  "explainable": {
+    "trace_id": "trace_samachar_e49b235f2b8a4828b42a2ce359fa75b9",
+    "observation_id": "obs_8377d574237a48b5907b96b0e5a7c6f0",
+    "candidate_vessel": "Cargo Vessel",
+    "candidate_class": "commercial_ship",
+    "confidence": 0.82,
+    "supporting_evidence": [
+      "Primary detected entity: Cargo Vessel (commercial_ship)",
+      "OCR text observed: cargo vessel spotted near territorial boundaries",
+      "Bounding box captured for spatial reference",
+      "Observation source: image"
+    ],
+    "maritime_reasoning": [
+      "Upstream layer classified the primary entity as 'Cargo Vessel' (commercial_ship) with raw confidence 0.92.",
+      "No maritime knowledge base match found; falling back to upstream classification. Flagged UNVERIFIED against Jane's Fighting Ships / fleet-history data.",
+      "No knowledge base corroboration found for this candidate identity; confidence will reflect an unverified classification."
+    ],
+    "knowledge_references": [
+      "No confirmed knowledge base reference"
+    ],
+    "runtime_trace": [
+      "trace_id=trace_samachar_e49b235f2b8a4828b42a2ce359fa75b9",
+      "observation_id=obs_8377d574237a48b5907b96b0e5a7c6f0",
+      "stage=StructuredIntelligenceConsumer:complete",
+      "stage=MaritimeReasoningEngine:complete",
+      "stage=ConfidenceRefinementEngine:complete",
+      "stage=ExplainabilityGenerator:complete"
+    ],
+    "lineage_reference": null
+  },
+  "replay_safe": true
+}

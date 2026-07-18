@@ -1,17 +1,17 @@
 {
   "trace_id": "trace_wrap_006",
   "observation_id": "obs_trace_wrap_006",
-  "bucket_id": "bucket_ad4e404b83d748c9b3f6aeddacb65df4",
-  "created_at": "2026-07-15T04:10:10.625485Z",
+  "bucket_id": "bucket_f2856c37284b4f87b9ebee0f840d6e06",
+  "created_at": "2026-07-18T07:50:31.584793Z",
   "observation": {
     "trace_id": "trace_wrap_006",
     "observation_id": "obs_trace_wrap_006",
-    "timestamp": "2026-07-15T04:10:10.625387Z",
+    "timestamp": "2026-07-18T07:50:31.584705Z",
     "observation_source": "manual",
     "upstream_source_type": "manual_operator",
     "entities": [
       {
-        "entity_id": "ent_manual_13fb6fe9",
+        "entity_id": "ent_manual_16a0c397",
         "name": "Unidentified Contact",
         "entity_type": "submarine",
         "raw_confidence": 0.6,

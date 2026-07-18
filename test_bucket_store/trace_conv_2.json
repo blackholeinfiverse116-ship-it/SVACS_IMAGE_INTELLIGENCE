@@ -1,12 +1,12 @@
 {
   "trace_id": "trace_conv_2",
   "observation_id": "obs_ais_001",
-  "bucket_id": "bucket_e48e5b6947474b16a83b09fb24271569",
-  "created_at": "2026-07-15T04:09:56.700160Z",
+  "bucket_id": "bucket_cfd365adec254bc1aa324e61a44cb327",
+  "created_at": "2026-07-18T07:50:17.443662Z",
   "observation": {
     "trace_id": "trace_conv_2",
     "observation_id": "obs_ais_001",
-    "timestamp": "2026-07-15T04:09:56.700095Z",
+    "timestamp": "2026-07-18T07:50:17.443607Z",
     "observation_source": "ais",
     "upstream_source_type": "ais_feed",
     "entities": [

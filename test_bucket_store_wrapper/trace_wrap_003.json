@@ -1,8 +1,8 @@
 {
   "trace_id": "trace_wrap_003",
   "observation_id": "obs_trace_wrap_003",
-  "bucket_id": "bucket_b46ce7644c294ebb93d9006c05220387",
-  "created_at": "2026-07-15T04:10:10.626453Z",
+  "bucket_id": "bucket_b0b54967d2ba4f2c859d7ea50db8c859",
+  "created_at": "2026-07-18T07:50:31.586203Z",
   "observation": {
     "trace_id": "trace_wrap_003",
     "observation_id": "obs_trace_wrap_003",

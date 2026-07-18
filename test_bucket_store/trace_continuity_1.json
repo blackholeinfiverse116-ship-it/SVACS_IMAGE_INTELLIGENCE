@@ -1,8 +1,8 @@
 {
   "trace_id": "trace_continuity_1",
   "observation_id": "obs_img_001",
-  "bucket_id": "bucket_88e09961b278428f8d2f919f5a4b816c",
-  "created_at": "2026-07-15T04:09:56.702558Z",
+  "bucket_id": "bucket_e0d7f0f3ad884ecbaaa92df307ea2e2c",
+  "created_at": "2026-07-18T07:50:17.445141Z",
   "observation": {
     "trace_id": "trace_continuity_1",
     "observation_id": "obs_img_001",
