@@ -211,4 +211,4 @@ class StructuredIntelligenceConsumer:
             upstream_confidence=float(payload.get("operator_confidence", 0.6)),
             supporting_evidence={"manual_raw": payload},
             provenance={"produced_by": "Manual Operator Entry", "schema_version": "1.0.0"},
-        )
+        ) 
